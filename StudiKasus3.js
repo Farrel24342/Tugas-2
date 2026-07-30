@@ -1,16 +1,23 @@
-function filterParkiranGanjil(daftarKendaraan, Tanggal) {
-    let platGanjil = [];
-    for (let i = 0; i < daftarPlat.length; i++) {
-        let plat = daftarPlat[i];
-        let nomorPlat = parseInt(plat.split(' ')[1]);
-        if (nomorPlat % 2 !== 0) {
-            platGanjil.push(plat);
-        }
+let plat = [1231, 999, 57, 2027,]
+let tanggal = 29;
+
+function filterParkirGanjilGenap (plat, tanggal){
+    let kendaraanDiizinkan = [];
+    for (let i = 0; i < plat.length; i++){
+        let digitTerakhir = (plat[i] % 10)
+
+        if (digitTerakhir %2 === tanggal %2){
+            kendaraanDiizinkan.push(plat[i])
+        } 
+        return kendaraanDiizinkan
     }
-    return platGanjil;
 }
+let hasil = filterParkirGanjilGenap(plat, tanggal)
+console.log(`Tanggal: ${tanggal}`)
 
-const daftarPlat = ["B 1234 ABC", "D 5678 XYZ", "F 9012 DEF", "G 3456 HIJ"];
-const hasilFilter = filterParkiranGanjil(daftarPlat);
-
-console.log("Plat nomor ganjil yang diperbolehkan parkir: ", hasilFilter);
+if (tanggal %2 === 0){
+    console.log('Hari ini tanggal genap')
+} else {
+    console.log('Hari ini tanggal ganjil')
+}
+console.log(`kendaraan yang boleh masuk: ${hasil}`)
