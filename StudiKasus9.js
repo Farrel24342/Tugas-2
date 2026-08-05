@@ -1,9 +1,9 @@
 const daftarPemain = [
-  { nama: "ProGamer99", skor: 850 },
+  { nama: "maxim6767", skor: 850 },
   { nama: "ShadowNinja", skor: 950 },
   { nama: "CyberKing", skor: 650 },
   { nama: "AlphaHero", skor: 910 },
-  { nama: "VortexRider", skor: 780 }
+  { nama: "lappaRider", skor: 780 }
 ];
 
 function prosesLeaderboard(pemain) {
